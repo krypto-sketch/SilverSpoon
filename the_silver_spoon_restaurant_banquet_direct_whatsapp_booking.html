@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Silver Spoon Restaurant &amp; Banquet | Madhukarpur, Sanai Lehari</title>
+<!-- Editorial Typography: Bodoni Moda (Display Serif) + Outfit (Grotesque Body) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..700&amp;family=Outfit:wght@300;400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@300..600,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-bright": "#fbf9f4",
+            "primary": "#1b1c19",
+            "primary-container": "#2a2723",
+            "surface-variant": "#e5e2dc",
+            "outline": "#7a776f",
+            "outline-variant": "#d5d0c7",
+            "secondary": "#a13f1c",
+            "secondary-container": "#f2794e",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f5f3ee",
+            "surface-container": "#eeece7",
+            "surface-container-high": "#e7e4de",
+            "surface-container-highest": "#dedad2",
+            "background": "#fbf9f4",
+            "dark-slate": "#121312",
+            "dark-card": "#1c1d1a",
+            "on-surface": "#1b1c19",
+            "on-surface-variant": "#5f5d57",
+            "on-surface-muted": "#827f77"
+          },
+          fontFamily: {
+            "serif-display": ["Bodoni Moda", "serif"],
+            "sans-body": ["Outfit", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-background text-on-surface font-sans-body antialiased selection:bg-primary selection:text-white">
+<!-- ================= TOP UTILITY NOTIFICATION BAR ================= -->
+<aside class="bg-dark-slate text-[#cac6c2] text-xs py-2 px-4 sm:px-8 border-b border-white/10">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 text-[12px] font-normal tracking-wide">
+<div class="flex items-center gap-4">
+<span class="inline-flex items-center gap-1.5 text-[#e5e2dc]">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span> Open daily 11:00 AM – 11:00 PM
+        </span>
+<span class="hidden md:inline text-white/30">|</span>
+<span class="hidden md:inline text-white/70">Madhukarpur Highway Junction, Sanai Lehari, UP</span>
+</div>
+<div class="flex items-center gap-6">
+<a class="hover:text-white transition-colors" href="tel:+919198911877">Call desk: +91 91989 11877</a>
+<a class="text-white hover:underline underline-offset-4 font-medium" href="#reservations">Reserve Table →</a>
+</div>
+</div>
+</aside>
+<!-- ================= MAIN EDITORIAL HEADER ================= -->
+<header class="sticky top-0 z-40 bg-background/95 backdrop-blur-sm border-b border-outline-variant/60">
+<div class="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between">
+<!-- Wordmark -->
+<a class="flex flex-col group" href="#">
+<span class="font-serif-display text-2xl sm:text-3xl tracking-tight text-primary font-medium">Silver Spoon</span>
+<span class="text-[10px] tracking-[0.24em] uppercase text-on-surface-variant -mt-0.5">Restaurant &amp; Banquet • Sanai Lehari</span>
+</a>
+<!-- Navigation links -->
+<nav class="hidden lg:flex items-center gap-8 text-[13px] uppercase tracking-[0.14em] font-medium text-on-surface-variant">
+<a class="hover:text-primary transition-colors py-1" href="#menu">What We Cook</a>
+<a class="hover:text-primary transition-colors py-1" href="#banquet">Venue &amp; Gathering</a>
+<a class="hover:text-primary transition-colors py-1" href="#real-photos">Real Spaces</a>
+<a class="hover:text-primary transition-colors py-1" href="#reservations">Bookings</a>
+<a class="hover:text-primary transition-colors py-1" href="#location">Directions</a>
+</nav>
+<!-- Action -->
+<div class="flex items-center gap-3"><a class="hidden sm:inline-flex text-[13px] font-medium px-4 py-2 text-primary hover:text-secondary transition-colors" href="https://wa.me/918957924156" target="_blank">
+WhatsApp Desk
+</a>
+<a class="inline-flex items-center justify-center px-5 py-2.5 bg-primary text-white text-[12px] uppercase tracking-[0.14em] font-medium hover:bg-black transition-all shadow-sm" href="#reservations">
+Book Table
+</a>
+<button aria-label="Open Menu" class="lg:hidden p-2 text-primary hover:text-secondary focus:outline-none" onclick="const nav = document.getElementById('mobile-nav-drawer'); nav.classList.toggle('hidden');">
+<span class="material-symbols-outlined block text-2xl">menu</span>
+</button></div>
+</div>
+<div class="hidden lg:hidden bg-background border-t border-outline-variant/60 px-4 py-4 space-y-3" id="mobile-nav-drawer">
+<nav class="flex flex-col space-y-2 text-sm uppercase tracking-[0.14em] font-medium text-on-surface-variant">
+<a class="py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="#menu" onclick="document.getElementById('mobile-nav-drawer').classList.add('hidden')">What We Cook</a>
+<a class="py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="#banquet" onclick="document.getElementById('mobile-nav-drawer').classList.add('hidden')">Venue &amp; Gathering</a>
+<a class="py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="#real-photos" onclick="document.getElementById('mobile-nav-drawer').classList.add('hidden')">Real Spaces</a>
+<a class="py-2 border-b border-outline-variant/30 hover:text-primary transition-colors" href="#reservations" onclick="document.getElementById('mobile-nav-drawer').classList.add('hidden')">Bookings</a>
+<a class="py-2 hover:text-primary transition-colors" href="#location" onclick="document.getElementById('mobile-nav-drawer').classList.add('hidden')">Directions</a>
+</nav>
+<div class="pt-3 border-t border-outline-variant/40 flex items-center justify-between text-xs text-on-surface-variant">
+<span>Desk: +91 91989 11877</span>
+<a class="text-secondary font-medium hover:underline" href="https://wa.me/918957924156" target="_blank">WhatsApp Us →</a>
+</div>
+</div></header>
+<main>
+<!-- ================= 1. ASYMMETRICAL EDITORIAL HERO ================= -->
+<section class="border-b border-outline-variant/60">
+<div class="max-w-7xl mx-auto px-4 sm:px-8 pt-12 pb-16 lg:py-20">
+<!-- Editorial Header Meta -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 border-b border-outline-variant/40">
+<div>
+<span class="text-[11px] font-semibold tracking-[0.22em] uppercase text-secondary block mb-3">Independent Highway Dining &amp; Events</span>
+<h1 class="font-serif-display text-4xl sm:text-6xl lg:text-7xl tracking-tight text-primary leading-[1.02] max-w-3xl">
+              Honest cooking, clay ovens, and spaces built for family gatherings.
+            </h1>
+</div>
+<div class="text-left md:text-right shrink-0">
+<p class="text-2xl font-serif-display text-primary">3.7 / 5.0</p>
+<p class="text-xs text-on-surface-variant tracking-wider uppercase">96 Google reviews</p>
+</div>
+</div>
+<!-- 65 / 35 Asymmetric Hero Split (Photo + Direct Story) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-10 items-stretch">
+<!-- Main Hero Real Venue Shot (65%) -->
+<div class="lg:col-span-8 relative"><div class="absolute -inset-2 bg-secondary/15 rounded-2xl -rotate-1 hidden sm:block"></div><div class="relative group overflow-hidden bg-surface-container aspect-[16/10] sm:aspect-[16/9] rounded-xl shadow-2xl border border-outline-variant/40"><img alt="Retouched authentic photograph of Silver Spoon Restaurant night facade with glowing 3D marquee and glass entrance" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.02] cursor-pointer" src="https://lh3.googleusercontent.com/aida/AEtjO1VunAhlrqrVjC7xONjyFcyVrMeakxCcoq9J4yUGUCB8gILYHtk4ZJ6VljmzjWpMSN7OlSP1WULug267YFitV8O1dmwAcUmoY6Eid9hp0PWpdiGWbK7QXkwzoKBIj5a17Pt09-6Zh9EBnkFexbXXih1vwWPAkGaWnZIxcUBx9ZMSiFpAZed6Zu2I89FvtpLAr12YfF-UCtQD9s4rtQMrHVxIeABeuJqGnPjuvllVqfryP7hMEeIycvk9gnE7"/><div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-6 sm:p-8 text-white"><span class="text-xs font-serif-display italic text-white/90 block mb-1">Authentic Venue View</span><p class="font-serif-display text-xl sm:text-2xl font-normal">Our Madhukarpur Highway entrance &amp; glowing marquee</p></div></div></div>
+<!-- Secondary Story / Context Block (35%) -->
+<div class="lg:col-span-4 flex flex-col justify-between bg-surface-container-lowest p-6 sm:p-8 rounded-xl shadow-xl border-t-4 border-t-secondary border-x border-b border-outline-variant/40 relative"><div class="space-y-4"><div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary/10 rounded-full text-secondary text-xs font-medium"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Highway Hospitality</div><h2 class="font-serif-display text-2xl text-primary leading-snug">Cooked fresh on order, right off the bypass.</h2><p class="text-sm text-on-surface-variant leading-relaxed">Silver Spoon is built for travelers, local family dinners, and celebratory events. Centrally air-conditioned dining booths, open live tandoor, separate mocktail counter, and an open lawn accommodating up to 300 guests.</p></div><div class="pt-8 border-t border-outline-variant/40 space-y-3"><div class="flex justify-between items-center text-xs py-1.5 border-b border-outline-variant/30"><span class="text-on-surface-variant">Location</span><span class="font-medium text-primary">Madhukarpur, Sanai Lehari</span></div><div class="flex justify-between items-center text-xs py-1.5 border-b border-outline-variant/30"><span class="text-on-surface-variant">Air Conditioning</span><span class="font-medium text-primary">Full climate-controlled hall</span></div><div class="flex justify-between items-center text-xs py-1.5 border-b border-outline-variant/30"><span class="text-on-surface-variant">Vehicle Parking</span><span class="font-medium text-primary">Dedicated guarded lot</span></div><div class="flex justify-between items-center text-xs py-1.5"><span class="text-on-surface-variant">Gathering Capacity</span><span class="font-medium text-primary">Up to 300 seated</span></div></div></div>
+</div>
+</div>
+</section>
+<!-- ================= 2. CLEAN FUNCTIONAL RESERVATION STRIP ================= -->
+<section class="bg-surface-container-high py-10 border-b border-outline-variant/60" id="reservations">
+<div class="max-w-7xl mx-auto px-4 sm:px-8">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6">
+<div>
+<span class="text-[11px] font-semibold tracking-[0.2em] uppercase text-secondary">Instant Table Hold</span>
+<h2 class="font-serif-display text-2xl sm:text-3xl text-primary mt-1">Book your table or family booth</h2>
+</div>
+<p class="text-xs sm:text-sm text-on-surface-variant max-w-md">
+            No booking fees. Direct confirmation over SMS and WhatsApp from our floor manager.
+          </p>
+</div>
+<form class="bg-white p-6 sm:p-8 rounded-xl shadow-xl border border-outline-variant/50 grid grid-cols-1 sm:grid-cols-2 gap-5 md:grid-cols-12 relative" id="table-booking-form"><div class="md:col-span-3"><label class="block text-xs font-medium text-on-surface-variant mb-1.5" for="res-date">Date</label><input class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm text-on-surface focus:border-secondary focus:ring-0 transition-colors" id="res-date" type="date" value="2025-05-20"/></div><div class="md:col-span-3"><label class="block text-xs font-medium text-on-surface-variant mb-1.5" for="res-time">Seating Time</label><select class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm text-on-surface focus:border-secondary focus:ring-0 transition-colors" id="res-time"><option value="12:30 PM (Lunch)">12:30 PM (Lunch)</option><option value="01:30 PM (Lunch)">01:30 PM (Lunch)</option><option value="02:30 PM (Afternoon)">02:30 PM (Afternoon)</option><option selected="" value="07:30 PM (Dinner)">07:30 PM (Dinner)</option><option value="08:30 PM (Dinner)">08:30 PM (Dinner)</option><option value="09:30 PM (Late Dinner)">09:30 PM (Late Dinner)</option></select></div><div class="md:col-span-3"><label class="block text-xs font-medium text-on-surface-variant mb-1.5" for="res-phone">Phone Number</label><input class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm text-on-surface focus:border-secondary focus:ring-0 transition-colors" id="res-phone" placeholder="+91 98XXX XXXXX" required="" type="tel"/></div><div class="md:col-span-3 flex items-end"><button class="w-full h-[42px] bg-secondary hover:bg-[#893315] text-white text-[12px] tracking-wider uppercase font-semibold rounded-lg transition-all shadow-md active:scale-[0.99] flex items-center justify-center gap-2" type="submit"><span class="material-symbols-outlined text-base">chat</span><span>Reserve via WhatsApp</span></button></div></form>
+<div class="hidden mt-4 p-3.5 bg-dark-slate text-white text-xs items-center justify-between rounded-lg" id="reserve-confirmation">
+<span>Opening WhatsApp to send your table reservation... Our floor team at Sanai Lehari will confirm shortly.</span>
+<button class="text-white/60 hover:text-white ml-3 text-lg leading-none" onclick="document.getElementById('reserve-confirmation').classList.add('hidden'); document.getElementById('reserve-confirmation').classList.remove('flex');">×</button>
+</div>
+</div>
+</section>
+<!-- ================= 3. REAL MENU HIGHLIGHT ================= -->
+<section class="py-20 max-w-7xl mx-auto px-4 sm:px-8" id="menu">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 pb-6 border-b border-outline-variant/60">
+<div>
+<span class="text-[11px] font-semibold tracking-[0.22em] uppercase text-secondary block mb-2">Straight From Our Counter</span>
+<h2 class="font-serif-display text-3xl sm:text-5xl text-primary">A few things people order most</h2>
+</div>
+<button class="px-6 py-3 bg-primary text-white text-xs uppercase tracking-wider font-semibold rounded-lg shadow-md hover:bg-black transition-colors" onclick="openMenuModal()">View Full Menu</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="p-6 bg-surface-container-low border border-outline-variant/40 rounded-xl">
+<span class="text-[10px] uppercase tracking-wider text-secondary font-semibold">Shake</span>
+<h4 class="font-serif-display text-xl text-primary mt-1">Silver Spoon Special Shake</h4>
+<p class="text-lg font-serif-display text-primary mt-3">₹121</p>
+</div>
+<div class="p-6 bg-surface-container-low border border-outline-variant/40 rounded-xl">
+<span class="text-[10px] uppercase tracking-wider text-secondary font-semibold">Breakfast Thali</span>
+<h4 class="font-serif-display text-xl text-primary mt-1">Special Veg Thali</h4>
+<p class="text-lg font-serif-display text-primary mt-3">₹289</p>
+</div>
+<div class="p-6 bg-surface-container-low border border-outline-variant/40 rounded-xl">
+<span class="text-[10px] uppercase tracking-wider text-secondary font-semibold">Breakfast</span>
+<h4 class="font-serif-display text-xl text-primary mt-1">Chola Bhatura</h4>
+<p class="text-lg font-serif-display text-primary mt-3">₹120</p>
+</div>
+<div class="p-6 bg-surface-container-low border border-outline-variant/40 rounded-xl">
+<span class="text-[10px] uppercase tracking-wider text-secondary font-semibold">Dessert</span>
+<h4 class="font-serif-display text-xl text-primary mt-1">Gulab Jamun</h4>
+<p class="text-lg font-serif-display text-primary mt-3">₹25</p>
+</div>
+</div>
+<div class="mt-10 flex justify-center">
+<button class="px-8 py-3.5 bg-secondary hover:bg-[#893315] text-white text-xs uppercase tracking-wider font-semibold rounded-lg shadow-md transition-colors" onclick="openOrderModal()">Order to Your Table →</button>
+</div>
+</section>
+<!-- ================= 4. REAL VENUE PHOTOGRAPHY (DATASTORE ASYMMETRY) ================= -->
+<section class="bg-dark-slate text-white py-20" id="real-photos">
+<div class="max-w-7xl mx-auto px-4 sm:px-8">
+<!-- Editorial Section Header in Dark Slate -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-12 border-b border-white/10">
+<div>
+<span class="text-[11px] font-semibold tracking-[0.24em] uppercase text-[#cac6c2] block mb-2">Unfiltered Space</span>
+<h2 class="font-serif-display text-3xl sm:text-5xl text-white">Actual photos inside the venue</h2>
+</div>
+<p class="text-xs sm:text-sm text-white/70 max-w-md">
+            No studio mockups. Here is our actual seating, lawn stage, and dining hall on the Madhukarpur Highway corridor.
+          </p>
+</div>
+<!-- Asymmetric 70/30 & Split Grid for Real Photos -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 pt-10"><!-- Real Photo 1: Deep Dining Hall & Blue Velvet Sofas (Col 7) -->
+<div class="lg:col-span-7 group relative bg-dark-card border border-white/10 rounded-xl overflow-hidden cursor-pointer shadow-2xl">
+<div class="aspect-[16/11] overflow-hidden">
+<img alt="Authentic tight view of Silver Spoon dining hall showing blue velvet booth seating, polished marble tables, and warm chandelier" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AEtjO1UeZse15T53NJ9TDN0ZNmxjzm2Z8HIfguimisF1lWRJeEqXEmi5km92OpNSDSbbTj8zn56_-LMST7gdcjEDg2HfXEbgsiLWAB232O3sKY18i4cd6RqnhTy18f6TyK7xRtE4CFZ0Z6qiYH7SWO7w_o6Gcan0RZyVNxHxJHyC6vVOZO9uvftSNdSl2z3DUaw0iDbPm2_mHJ28ZLXNE6r1I4eL71GVYZmQhe4GGWMB9tLLmi4UWXyQ0U4yYpY-"/>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between text-xs text-secondary mb-1">
+<span class="font-medium">Family Dining Hall</span>
+<span class="text-white/60">Fully Air Conditioned</span>
+</div>
+<h3 class="font-serif-display text-2xl text-white">Blue velvet family sofas &amp; marble tables</h3>
+<p class="text-xs text-white/70 mt-2 leading-relaxed">
+Comfortable high-back seating configured for large Indian family dining, highway travelers, and private lunches.
+</p>
+</div>
+</div>
+<!-- Real Photo 2: Open Lawn & Party Setup (Col 5) -->
+<div class="lg:col-span-5 flex flex-col justify-between bg-dark-card border border-white/10 rounded-xl overflow-hidden cursor-pointer group shadow-2xl">
+<div class="aspect-[16/11] overflow-hidden">
+<img alt="Outdoor celebration lawn stage with decor and floral arrangements at Silver Spoon Sanai Lehari" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AEtjO1Uvhvgm5OSjMoAOccCtPDbDAjVdWgsGypot_D6Esj-0mSWv4GwVW7A81DoxGRrDwv7Bo5PuuSnk_eYh6dovHC-flur-C2RJEmk5Gl5hspXbeqiHymu0AHow4364xnpqc4acM0J0kf45D-djwQ0cCLlwzrb0JgjS8cQB3v0_WCgLBNVo9Qk93ev8JAouy_F8o6WDu-gGjIzPJKiEQWiiRs10Zs2tJn78hJiEXXyzSTOZ0y9WNlrDN21VUQUs"/>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between text-xs text-secondary mb-1">
+<span class="font-medium">Outdoor Stage &amp; Lawn</span>
+<span class="text-white/60">Events up to 300</span>
+</div>
+<h3 class="font-serif-display text-2xl text-white">Lawn setup for birthdays &amp; rings</h3>
+<p class="text-xs text-white/70 mt-2 leading-relaxed">
+Flexible stage layouts, customizable balloon &amp; floral pavilions, and direct passage to our catering tables.
+</p>
+</div>
+</div>
+<!-- Real Photo 3: Neon Corner / Ambience (Col 5) -->
+<div class="lg:col-span-5 bg-dark-card border border-white/10 rounded-xl overflow-hidden cursor-pointer group shadow-2xl">
+<div class="aspect-[16/10] overflow-hidden">
+<img alt="Interior architectural photo of the modern accent wall with artistic neon installation and vertical slatted wood paneling inside Silver Spoon Restaurant" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AEtjO1U5nVKmAppZaKRfyoR1AZHsK4AJPDyxq-jh2h4IaRfk4iB9DgOn2F_5WDIBYYWsnBBvxTq_XcoHp7aj8aAY8ypPWI6oUKGbZPl8evYDIV1ihe19J4x5g7h4dGghaQ1shdNXLCe6F3VJfrWAl5zbPxdOeb8JyIycw4KePNiHKq0lLicdHIZCpntIUn9YlLRL02LN7Qv_0D-OTsmydahKuOLAPRt39IxntOUDRO1DKfkOvrPvHBJOgvQdXeg"/>
+</div>
+<div class="p-5">
+<span class="text-xs text-secondary block font-medium">Interior Detail</span>
+<h4 class="font-serif-display text-lg text-white mt-1">Ambient accent wall &amp; soft chandeliers</h4>
+</div>
+</div>
+<!-- Real Photo 4: Night Highway Facade (Col 7) -->
+<div class="lg:col-span-7 bg-dark-card border border-white/10 rounded-xl overflow-hidden cursor-pointer group shadow-2xl">
+<div class="aspect-[16/10] overflow-hidden">
+<img alt="Retouched authentic photograph of Silver Spoon Restaurant night facade with glowing 3D marquee and glass entrance" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AEtjO1VunAhlrqrVjC7xONjyFcyVrMeakxCcoq9J4yUGUCB8gILYHtk4ZJ6VljmzjWpMSN7OlSP1WULug267YFitV8O1dmwAcUmoY6Eid9hp0PWpdiGWbK7QXkwzoKBIj5a17Pt09-6Zh9EBnkFexbXXih1vwWPAkGaWnZIxcUBx9ZMSiFpAZed6Zu2I89FvtpLAr12YfF-UCtQD9s4rtQMrHVxIeABeuJqGnPjuvllVqfryP7hMEeIycvk9gnE7"/>
+</div>
+<div class="p-5">
+<div class="flex items-center justify-between">
+<div>
+<span class="text-xs text-secondary block font-medium">Night Landmark</span>
+<h4 class="font-serif-display text-lg text-white mt-1">Illuminated roadside facade &amp; clear vehicle entry</h4>
+</div>
+<span class="text-xs text-emerald-400 border border-emerald-500/40 px-3 py-1 rounded-full">Guard on duty</span>
+</div>
+</div>
+</div></div>
+</div>
+</section>
+<!-- ================= 5. BANQUET & GATHERING SPECIFICATIONS ================= -->
+<section class="py-20 max-w-7xl mx-auto px-4 sm:px-8 border-b border-outline-variant/60" id="banquet">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Copy Column (55%) -->
+<div class="lg:col-span-7 space-y-6">
+<span class="text-[11px] font-semibold tracking-[0.22em] uppercase text-secondary block">Celebrations &amp; Banquets</span>
+<h2 class="font-serif-display text-3xl sm:text-5xl text-primary leading-tight">
+            Tables &amp; big gatherings on the highway.
+          </h2>
+<p class="text-base text-on-surface-variant leading-relaxed">
+            Planning an engagement party, anniversary lunch, or a 150-guest wedding reception? We offer complete hall buyout, open lawn setups, live tandoor catering stalls, and dedicated dressing suites so your guests enjoy every hour in comfort.
+          </p>
+<!-- Clean Key Metric List -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-outline-variant/40">
+<div>
+<p class="font-serif-display text-3xl text-primary">300 Guests</p>
+<p class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant mt-1">Full Lawn + Hall Capacity</p>
+<p class="text-xs text-on-surface-muted mt-1">Spill-over space between our central AC hall and outdoor terrace.</p>
+</div>
+<div>
+<p class="font-serif-display text-3xl text-primary">Live Catering</p>
+<p class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant mt-1">Fresh Tandoor on Site</p>
+<p class="text-xs text-on-surface-muted mt-1">Hot naans, kebabs, and curries prepared right in front of your attendees.</p>
+</div>
+<div>
+<p class="font-serif-display text-3xl text-primary">Power Backup</p>
+<p class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant mt-1">100% Continuous Supply</p>
+<p class="text-xs text-on-surface-muted mt-1">Industrial backup generators keep air-conditioning and sound online.</p>
+</div>
+<div>
+<p class="font-serif-display text-3xl text-primary">Private Suite</p>
+<p class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant mt-1">Host Changing Room</p>
+<p class="text-xs text-on-surface-muted mt-1">Dedicated air-conditioned green room for bride, groom, or hosts.</p>
+</div>
+</div>
+</div>
+<!-- Banquet Direct Inquiry Form (45%) -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-6 sm:p-8 rounded-2xl shadow-xl border border-outline-variant/50 relative"><div class="pb-4 border-b border-outline-variant/40"><span class="inline-block px-2.5 py-0.5 rounded bg-secondary/10 text-secondary text-xs font-semibold">Direct Manager Line</span><h3 class="font-serif-display text-2xl text-primary mt-2">Inquire for events</h3><p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Leave your dates and expected headcount. We reply directly on WhatsApp.</p></div><form class="space-y-4 pt-6" id="event-inquiry-form"><div><label class="block text-xs font-medium text-on-surface-variant mb-1" for="evt-name">Full Name</label><input class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm focus:border-secondary focus:ring-0" id="evt-name" placeholder="Ramesh Singh" required="" type="text"/></div><div class="grid grid-cols-2 gap-3"><div><label class="block text-xs font-medium text-on-surface-variant mb-1" for="evt-phone">Phone / WhatsApp</label><input class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm focus:border-secondary focus:ring-0" id="evt-phone" placeholder="+91 98XXX XXXXX" required="" type="tel"/></div><div><label class="block text-xs font-medium text-on-surface-variant mb-1" for="evt-guests">Guest Count</label><input class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm focus:border-secondary focus:ring-0" id="evt-guests" placeholder="50 to 300" type="number"/></div></div><div><label class="block text-xs font-medium text-on-surface-variant mb-1" for="evt-date">Planned Date</label><input class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm focus:border-secondary focus:ring-0" id="evt-date" type="date"/></div><div><label class="block text-xs font-medium text-on-surface-variant mb-1" for="evt-type">Event Type</label><select class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm focus:border-secondary focus:ring-0" id="evt-type"><option>Birthday &amp; Milestone Gathering</option><option>Wedding &amp; Ring Ceremony</option><option>Family Anniversary Feast</option><option>Corporate Dinner &amp; Meeting</option></select></div><button class="w-full py-3 bg-secondary hover:bg-[#893315] text-white text-xs tracking-wider uppercase font-semibold rounded-lg transition-colors mt-2 shadow-md flex items-center justify-center gap-2" type="submit"><span class="material-symbols-outlined text-base">chat</span><span>Send Inquiry via WhatsApp</span></button></form><div class="hidden mt-4 p-3 bg-dark-slate text-white text-xs rounded-lg" id="evt-success">Opening WhatsApp to send your event inquiry... Our banquet coordinator will respond promptly.</div></div>
+</div>
+</section>
+<!-- ================= 6. REVIEWS (CLEAN TYPOGRAPHY, NO SPARKLES) ================= -->
+<section class="py-16 max-w-7xl mx-auto px-4 sm:px-8 border-b border-outline-variant/60">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 pb-4 border-b border-outline-variant/40">
+<div>
+<span class="text-[11px] font-semibold tracking-[0.2em] uppercase text-secondary">Guest Feedback</span>
+<h2 class="font-serif-display text-2xl sm:text-4xl text-primary mt-1">3.7 / 5.0 · 96 Google reviews</h2>
+</div>
+<a class="text-xs text-secondary hover:underline flex items-center gap-1 font-medium" href="https://maps.google.com" target="_blank">
+<span>View all on Google Maps</span>
+<span class="material-symbols-outlined text-sm">arrow_outward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="space-y-4 p-6 sm:p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/60 shadow-sm">
+<div class="flex items-center gap-1 text-secondary text-sm">★★★★★</div>
+<p class="text-sm text-on-surface leading-relaxed">"Stopping here on the bypass was the best decision. Centrally air-conditioned hall, quick service, and clean family seating."</p>
+<p class="text-xs text-on-surface-variant font-medium">— Anand Kumar Singh</p>
+</div>
+<div class="space-y-4 p-6 sm:p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/60 shadow-sm">
+<div class="flex items-center gap-1 text-secondary text-sm">★★★★★</div>
+<p class="text-sm text-on-surface leading-relaxed">"The banquet lawn and catering arrangement for our family event was handled smoothly. Plenty of parking space for guests."</p>
+<p class="text-xs text-on-surface-variant font-medium">— Pooja Verma</p>
+</div>
+<div class="space-y-4 p-6 sm:p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/60 shadow-sm">
+<div class="flex items-center gap-1 text-secondary text-sm">★★★★★</div>
+<p class="text-sm text-on-surface leading-relaxed">"Fresh tandoor naans, authentic shakes, and generous thali portions. Highly recommended if you're crossing Sanai Lehari."</p>
+<p class="text-xs text-on-surface-variant font-medium">— Dr. Rajesh Tiwari</p>
+</div>
+</div>
+</section>
+<!-- ================= 7. LOCATION & DIRECTIONS STRIP ================= -->
+<section class="py-16 max-w-7xl mx-auto px-4 sm:px-8" id="location">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+<!-- Location details (50%) -->
+<div class="lg:col-span-6 flex flex-col justify-between p-8 sm:p-10 bg-surface-container-lowest rounded-2xl shadow-xl border border-outline-variant/50 relative"><div class="absolute top-0 left-8 right-8 h-1 bg-secondary rounded-full"></div><div><span class="inline-block px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-medium mb-3">Right Off The Bypass</span><h2 class="font-serif-display text-3xl sm:text-4xl text-primary">Finding Silver Spoon</h2><p class="text-sm text-on-surface-variant mt-3 leading-relaxed">Located right on the main Madhukarpur Highway corridor in Sanai Lehari. Easily identifiable by our rooftop illuminated sign and spacious entry gates.</p><dl class="mt-8 space-y-6 text-xs"><div class="flex items-start gap-4"><div class="w-10 h-10 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-xl">location_on</span></div><div><dt class="font-semibold text-primary text-sm">Exact Highway Address</dt><dd class="text-on-surface-variant mt-0.5 leading-relaxed">Opposite Highway Main Road, Madhukarpur Junction, Sanai Lehari, Uttar Pradesh</dd></div></div><div class="flex items-start gap-4"><div class="w-10 h-10 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-xl">schedule</span></div><div><dt class="font-semibold text-primary text-sm">Kitchen &amp; Dining Hours</dt><dd class="text-on-surface-variant mt-0.5 leading-relaxed">Monday to Sunday: 11:00 AM to 11:00 PM without midday break</dd></div></div><div class="flex items-start gap-4"><div class="w-10 h-10 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-xl">local_parking</span></div><div><dt class="font-semibold text-primary text-sm">Parking &amp; Valet Access</dt><dd class="text-on-surface-variant mt-0.5 leading-relaxed">Complimentary guarded parking on venue grounds for family cars and tourist coaches</dd></div></div></dl></div><div class="pt-8 mt-8 border-t border-outline-variant/40 flex flex-wrap gap-4"><a class="px-6 py-3 bg-secondary hover:bg-[#893315] text-white text-xs uppercase tracking-wider font-semibold rounded-lg shadow-md transition-colors inline-flex items-center gap-2" href="https://maps.google.com" target="_blank"><span>Open Google Navigation</span><span class="material-symbols-outlined text-base">arrow_outward</span></a><a class="px-5 py-3 border border-outline-variant text-primary text-xs uppercase tracking-wider font-medium hover:bg-surface-container rounded-lg transition-colors" href="tel:+919198911877">Call Desk for Directions</a></div></div>
+<!-- Static clean map layout (50%) -->
+<div class="lg:col-span-6 border border-outline-variant/50 bg-surface-container relative min-h-[380px] rounded-2xl overflow-hidden shadow-xl flex flex-col justify-end p-6 sm:p-8"><div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAKW9Xh7TyhXWgLfG6-yCYc646qB1DshMamCvFK3MeAMjg4VwDV2AOD4Nipo-36Zni5RPoS-rj7gvvfPn-LT0em8be8uzq6PpK789hICdwPWdYapK_ygd-5uET424F1dWDoejtMS2Qz-CxiJMDd2p8gecJeYdTldCwb87cBzkgPKXCa9yXrs3khm23LLYRxqwr8HuSfBLAW37ZhASxF2bu1OkEBH5IqnrzwYXGjfB4lcymF41r5oLvPYA');"></div><div class="relative bg-white/95 backdrop-blur-sm p-5 border border-outline-variant/60 rounded-xl shadow-lg max-w-sm"><div class="flex items-center gap-1.5 text-secondary text-xs font-semibold mb-1"><span class="material-symbols-outlined text-base">storefront</span><span>Madhukarpur Highway Landmark</span></div><p class="font-serif-display text-lg text-primary font-medium">Silver Spoon Restaurant &amp; Banquet</p><p class="text-[11px] text-on-surface-variant mt-1 leading-relaxed">Direct roadside access with wide entry apron for effortless highway parking.</p></div></div>
+</div>
+</section>
+</main>
+<!-- ================= EDITORIAL FOOTER ================= -->
+<footer class="bg-dark-slate text-[#cac6c2] border-t border-white/10 pt-16 pb-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-1 md:grid-cols-12 gap-10">
+<div class="md:col-span-5 space-y-4">
+<a class="inline-block" href="#">
+<span class="font-serif-display text-2xl tracking-tight text-white font-medium">Silver Spoon</span>
+<span class="block text-[10px] tracking-[0.24em] uppercase text-white/50 -mt-0.5">Restaurant &amp; Banquet • Sanai Lehari</span>
+</a>
+<p class="text-xs text-white/70 max-w-sm leading-relaxed">
+          Highway dining and events venue in Madhukarpur. Fresh clay tandoor cooking, multi-cuisine family meals, and banquet grounds designed for wedding receptions, birthdays, and community gatherings.
+        </p>
+<p class="text-xs text-white/50">Fresh, hygienically prepared meals — every day</p>
+</div>
+<div class="md:col-span-3 space-y-3">
+<p class="text-xs font-semibold uppercase tracking-[0.16em] text-white">Direct Contacts</p>
+<div class="space-y-1.5 text-xs text-white/70">
+<p><a class="hover:text-white" href="tel:+919198911877">+91 91989 11877 (Desk)</a></p>
+<p><a class="hover:text-white" href="tel:+919198911877">+91 91989 11877 (Banquet Manager)</a></p>
+<p><a class="hover:text-white" href="https://wa.me/918957924156">WhatsApp Inquiries Available</a></p>
+<p class="pt-2 text-white/50">Madhukarpur Highway, Sanai Lehari, UP</p>
+</div>
+</div>
+<div class="md:col-span-2 space-y-3">
+<p class="text-xs font-semibold uppercase tracking-[0.16em] text-white">Sections</p>
+<div class="flex flex-col space-y-2 text-xs text-white/70">
+<a class="hover:text-white transition-colors" href="#menu">What We Cook</a>
+<a class="hover:text-white transition-colors" href="#banquet">Venue &amp; Gatherings</a>
+<a class="hover:text-white transition-colors" href="#real-photos">Real Photos</a>
+<a class="hover:text-white transition-colors" href="#reservations">Table Booking</a>
+<a class="hover:text-white transition-colors" href="#location">Directions</a>
+</div>
+</div>
+<div class="md:col-span-2 space-y-3">
+<p class="text-xs font-semibold uppercase tracking-[0.16em] text-white">Hours</p>
+<div class="space-y-1 text-xs text-white/70">
+<p class="text-white font-medium">Daily Service</p>
+<p>11:00 AM – 11:00 PM</p>
+<p class="text-[11px] text-white/50 mt-2">Continuous kitchen operation including afternoon travelers.</p>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-4 sm:px-8 mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-white/50 gap-4">
+<p>© 2025 Silver Spoon Restaurant &amp; Banquet. Madhukarpur, Sanai Lehari.</p>
+<p>Clean highway hospitality • Real venue photography</p>
+</div>
+</footer>
+<!-- ================= MENU MODAL ================= -->
+<div class="fixed inset-0 z-[100] hidden" id="menuModal">
+<div class="absolute inset-0 bg-black/60" onclick="closeMenuModal()"></div>
+<div class="absolute inset-x-0 bottom-0 sm:inset-0 sm:m-auto sm:max-w-2xl sm:h-[85vh] h-[90vh] bg-background rounded-t-2xl sm:rounded-2xl overflow-hidden flex flex-col shadow-2xl">
+<div class="flex items-center justify-between px-6 py-4 border-b border-outline-variant/60 bg-surface-container-lowest shrink-0">
+<h3 class="font-serif-display text-xl text-primary">Full Menu</h3>
+<button class="p-2 text-on-surface-variant hover:text-primary" onclick="closeMenuModal()"><span class="material-symbols-outlined">close</span></button>
+</div>
+<div class="overflow-y-auto px-6 py-5 space-y-8" id="menuModalBody"></div>
+</div>
+</div>
+<!-- ================= ORDER TO TABLE MODAL ================= -->
+<div class="fixed inset-0 z-[100] hidden" id="orderModal">
+<div class="absolute inset-0 bg-black/60" onclick="closeOrderModal()"></div>
+<div class="absolute inset-x-0 bottom-0 sm:inset-0 sm:m-auto sm:max-w-2xl sm:h-[85vh] h-[92vh] bg-background rounded-t-2xl sm:rounded-2xl overflow-hidden flex flex-col shadow-2xl">
+<div class="flex items-center justify-between px-6 py-4 border-b border-outline-variant/60 bg-surface-container-lowest shrink-0">
+<h3 class="font-serif-display text-xl text-primary" id="orderModalTitle">Order to Your Table</h3>
+<button class="p-2 text-on-surface-variant hover:text-primary" onclick="closeOrderModal()"><span class="material-symbols-outlined">close</span></button>
+</div>
+<!-- STEP 1: Pick items -->
+<div class="flex-1 overflow-y-auto flex flex-col" id="orderStep1">
+<div class="flex gap-2 overflow-x-auto px-6 pt-4 pb-2 shrink-0" id="orderTabs"></div>
+<div class="px-6 pb-4 space-y-3" id="orderItemsList"></div>
+</div>
+<!-- STEP 2: Details -->
+<div class="hidden flex-1 overflow-y-auto px-6 py-5 space-y-4" id="orderStep2">
+<div>
+<label class="block text-xs font-medium text-on-surface-variant mb-1.5">Your Name</label>
+<input class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm focus:border-secondary focus:ring-0" id="ord-name" placeholder="e.g. Ramesh Singh" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-on-surface-variant mb-1.5">Table / Seat Number</label>
+<input class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm focus:border-secondary focus:ring-0" id="ord-table" placeholder="e.g. Table 4, or 'Lawn seating'" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-on-surface-variant mb-1.5">Your Phone Number (optional)</label>
+<input class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm focus:border-secondary focus:ring-0" id="ord-phone" placeholder="+91 98XXX XXXXX" type="tel"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-on-surface-variant mb-1.5">Any special instructions</label>
+<textarea class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm focus:border-secondary focus:ring-0" id="ord-note" placeholder="e.g. less spicy" rows="2"></textarea>
+</div>
+</div>
+<!-- STEP 3: Review -->
+<div class="hidden flex-1 overflow-y-auto px-6 py-5" id="orderStep3">
+<h4 class="font-serif-display text-lg text-primary mb-3">Review your order</h4>
+<div class="space-y-2 text-sm" id="orderReviewList"></div>
+<div class="flex justify-between items-center mt-4 pt-4 border-t border-outline-variant/40 font-medium text-primary">
+<span>Total</span><span class="font-serif-display text-xl" id="orderReviewTotal"></span>
+</div>
+<p class="text-xs text-on-surface-muted mt-4 leading-relaxed">Tapping "Send Order" opens WhatsApp with your order pre-filled. You'll still need to hit send inside WhatsApp yourself — we can't send it on your behalf automatically.</p>
+</div>
+<!-- STEP 4: Success -->
+<div class="hidden flex-1 overflow-y-auto px-6 py-10 flex flex-col items-center justify-center text-center" id="orderStep4">
+<div class="w-16 h-16 rounded-full bg-emerald-500 flex items-center justify-center mb-5"><span class="material-symbols-outlined text-white text-3xl">check</span></div>
+<h4 class="font-serif-display text-2xl text-primary mb-2">Order sent to Silver Spoon!</h4>
+<p class="text-sm text-on-surface-variant max-w-xs">Once you hit send in WhatsApp, your order will reach us and should be with you shortly.</p>
+<button class="mt-8 px-6 py-3 bg-primary text-white text-xs uppercase tracking-wider font-semibold rounded-lg" onclick="closeOrderModal()">Done</button>
+</div>
+<!-- Bottom bar / nav buttons -->
+<div class="border-t border-outline-variant/60 bg-surface-container-lowest px-6 py-4 flex items-center justify-between shrink-0" id="orderNavBar">
+<div class="text-sm" id="orderFooterSummary"></div>
+<div class="flex gap-2" id="orderNavButtons"></div>
+</div>
+</div>
+</div>
+<!-- ================= ROBUST VANILLA JAVASCRIPT ================= -->
+<script>
+    // ============== REAL MENU DATA (from owner's physical menu) ==============
+    const OWNER_WHATSAPP = "918957924156";
+    const fullMenu = {
+      "Shakes": [
+        {id: "s1", name:"Silver Spoon Special Shake", price:121},
+        {id: "s2", name:"Strawberry Shake", price:109},
+        {id: "s3", name:"Cold Coffee", price:109},
+        {id: "s4", name:"Chocolate Shake", price:109},
+        {id: "s5", name:"Vanilla Shake", price:109},
+        {id: "s6", name:"Mango Shake", price:109},
+        {id: "s7", name:"Oreo Shake", price:109},
+        {id: "s8", name:"Kit-Kat Shake", price:109},
+        {id: "s9", name:"Mishrambu Shake", price:109},
+      ],
+      "Mojito & Soda": [
+        {id: "m1", name:"Mojito (Cola / Green Apple / Virgin)", price:121},
+        {id: "m2", name:"Fresh Lime Soda (Sweet & Salted)", price:55},
+        {id: "m3", name:"Green Apple Soda", price:109},
+      ],
+      "Tea & Coffee": [
+        {id: "t1", name:"Silver Spoon Special Tea", price:30},
+        {id: "t2", name:"Hot Coffee / Black Coffee", price:49},
+        {id: "t3", name:"Lemon Masala Tea", price:39},
+        {id: "t4", name:"Black Tea", price:30},
+      ],
+      "Soft Drinks & Water": [
+        {id: "d1", name:"Maaza / Thums Up / Sprite / Coca-Cola", price:59},
+        {id: "d2", name:"Mineral Water", price:20},
+      ],
+      "Desserts": [
+        {id: "ds1", name:"Gulab Jamun", price:25},
+        {id: "ds2", name:"Vanilla Ice Cream", price:49},
+        {id: "ds3", name:"Butterscotch Ice Cream", price:59},
+        {id: "ds4", name:"Chocolate Ice Cream", price:59},
+        {id: "ds5", name:"Strawberry Ice Cream", price:59},
+        {id: "ds6", name:"Sweet Lassi", price:79},
+      ],
+      "Breakfast (Room Service, 7–11 AM only)": [
+        {id: "b1", name:"Special Veg Thali", price:289, note:"Paneer sabji, dal fry, mix veg, papad, salad, 2pc butter roti, rice, achar, sweet, raita, water"},
+        {id: "b2", name:"Special Non-Veg Thali", price:309, note:"Mutton masala, chicken curry, dal fry, roti, lachha paratha, rice, salad, papad, sweet"},
+        {id: "b3", name:"Chola Bhatura", price:120},
+        {id: "b4", name:"Puri Sabji with Tea", price:120},
+      ],
+    };
+    
+    // Quick lookup dictionary by item ID
+    const itemsById = {};
+    Object.entries(fullMenu).forEach(([cat, list]) => {
+      list.forEach(item => { itemsById[item.id] = { ...item, category: cat }; });
+    });
+
+    // Categories available for quick table-side ordering
+    const orderableCategories = ["Shakes", "Mojito & Soda", "Tea & Coffee", "Soft Drinks & Water", "Desserts"];
+
+    // ============== MENU MODAL (read-only, full list) ==============
+    function openMenuModal(){
+      const body = document.getElementById('menuModalBody');
+      body.innerHTML = Object.entries(fullMenu).map(([cat, items]) => `
+        <div>
+          <h4 class="font-serif-display text-lg text-primary mb-3 pb-2 border-b border-outline-variant/40">${cat}</h4>
+          <div class="space-y-2.5">
+            ${items.map(it => `
+              <div class="flex justify-between items-start gap-4 text-sm">
+                <div>
+                  <span class="text-on-surface font-medium">${it.name}</span>
+                  ${it.note ? `<p class="text-xs text-on-surface-muted mt-0.5">${it.note}</p>` : ''}
+                </div>
+                <span class="font-serif-display text-primary shrink-0">₹${it.price}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `).join('');
+      document.getElementById('menuModal').classList.remove('hidden');
+    }
+    function closeMenuModal(){ document.getElementById('menuModal').classList.add('hidden'); }
+
+    // ============== ORDER TO TABLE FLOW ==============
+    let orderState = {}; // { itemId: qty }
+    let orderStep = 1;
+    let orderActiveCat = orderableCategories[0];
+
+    function openOrderModal(){
+      orderStep = 1;
+      showOrderStep();
+      renderOrderTabs();
+      renderOrderItems();
+      document.getElementById('orderModal').classList.remove('hidden');
+    }
+    function closeOrderModal(){ document.getElementById('orderModal').classList.add('hidden'); }
+
+    function renderOrderTabs(){
+      const tabsEl = document.getElementById('orderTabs');
+      tabsEl.innerHTML = orderableCategories.map(cat => `
+        <button type="button" class="shrink-0 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide transition-colors ${cat===orderActiveCat ? 'bg-primary text-white' : 'bg-surface-container text-on-surface-variant hover:text-primary'}"
+          data-cat="${cat}">${cat}</button>
+      `).join('');
+
+      tabsEl.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          orderActiveCat = e.currentTarget.getAttribute('data-cat');
+          renderOrderTabs();
+          renderOrderItems();
+        });
+      });
+    }
+
+    function renderOrderItems(){
+      const listEl = document.getElementById('orderItemsList');
+      const items = fullMenu[orderActiveCat] || [];
+      listEl.innerHTML = items.map(it => {
+        const qty = orderState[it.id] || 0;
+        return `
+        <div class="flex items-center justify-between gap-3 p-3.5 bg-surface-container-low rounded-lg border border-outline-variant/40">
+          <div class="min-w-0">
+            <p class="text-sm font-medium text-on-surface truncate">${it.name}</p>
+            <p class="text-xs text-on-surface-muted">₹${it.price}</p>
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            ${qty > 0 ? `<button type="button" class="w-7 h-7 rounded-md border border-outline-variant/60 text-primary font-bold hover:bg-surface-container transition-colors flex items-center justify-center btn-minus" data-id="${it.id}">−</button>
+            <span class="w-5 text-center text-sm font-semibold">${qty}</span>` : ''}
+            <button type="button" class="w-7 h-7 rounded-md ${qty>0 ? 'border border-outline-variant/60 text-primary hover:bg-surface-container' : 'bg-primary text-white hover:bg-black'} flex items-center justify-center text-sm font-bold transition-colors btn-plus" data-id="${it.id}">+</button>
+          </div>
+        </div>`;
+      }).join('');
+
+      listEl.querySelectorAll('.btn-plus').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const id = e.currentTarget.getAttribute('data-id');
+          orderState[id] = (orderState[id] || 0) + 1;
+          renderOrderItems();
+        });
+      });
+
+      listEl.querySelectorAll('.btn-minus').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const id = e.currentTarget.getAttribute('data-id');
+          if (orderState[id] > 1) {
+            orderState[id] -= 1;
+          } else {
+            delete orderState[id];
+          }
+          renderOrderItems();
+        });
+      });
+
+      updateOrderFooter();
+    }
+
+    function getOrderSummary(){
+      let count = 0, total = 0, lines = [];
+      Object.entries(orderState).forEach(([id, qty]) => {
+        const item = itemsById[id];
+        if (item && qty > 0) {
+          count += qty;
+          total += qty * item.price;
+          lines.push({ name: item.name, qty, price: item.price, lineTotal: qty * item.price });
+        }
+      });
+      return { count, total, lines };
+    }
+
+    function updateOrderFooter(){
+      const { count, total } = getOrderSummary();
+      const summaryEl = document.getElementById('orderFooterSummary');
+      if (summaryEl) {
+        summaryEl.textContent = count > 0 ? `${count} item${count>1?'s':''} · ₹${total}` : 'No items selected';
+      }
+      renderOrderNavButtons();
+    }
+
+    function renderOrderNavButtons(){
+      const el = document.getElementById('orderNavButtons');
+      if (!el) return;
+      const { count } = getOrderSummary();
+      if (orderStep === 1){
+        el.innerHTML = `<button type="button" class="px-6 py-2.5 bg-primary text-white text-xs uppercase tracking-wider font-semibold rounded-lg transition-opacity ${count===0 ? 'opacity-40 pointer-events-none' : 'hover:bg-black'}" onclick="goToStep(2)">Next →</button>`;
+      } else if (orderStep === 2){
+        el.innerHTML = `
+          <button type="button" class="px-4 py-2.5 border border-outline-variant text-primary text-xs uppercase tracking-wider font-medium rounded-lg hover:bg-surface-container transition-colors" onclick="goToStep(1)">← Back</button>
+          <button type="button" class="px-6 py-2.5 bg-primary text-white text-xs uppercase tracking-wider font-semibold rounded-lg hover:bg-black transition-colors" onclick="goToReview()">Review Order →</button>`;
+      } else if (orderStep === 3){
+        el.innerHTML = `
+          <button type="button" class="px-4 py-2.5 border border-outline-variant text-primary text-xs uppercase tracking-wider font-medium rounded-lg hover:bg-surface-container transition-colors" onclick="goToStep(2)">← Back</button>
+          <button type="button" class="px-6 py-2.5 bg-secondary text-white text-xs uppercase tracking-wider font-semibold rounded-lg hover:bg-[#893315] transition-colors" onclick="sendOrder()">Send Order →</button>`;
+      } else {
+        el.innerHTML = '';
+      }
+    }
+
+    function showOrderStep(){
+      [1,2,3,4].forEach(n => {
+        const s = document.getElementById('orderStep' + n);
+        if (s) s.classList.toggle('hidden', n !== orderStep);
+      });
+      const navBar = document.getElementById('orderNavBar');
+      if (navBar) navBar.classList.toggle('hidden', orderStep === 4);
+      const titles = {1:"Order to Your Table", 2:"A Few Details", 3:"Review Your Order", 4:"Order Sent"};
+      const titleEl = document.getElementById('orderModalTitle');
+      if (titleEl) titleEl.textContent = titles[orderStep] || "Order";
+    }
+
+    function goToStep(n){ orderStep = n; showOrderStep(); updateOrderFooter(); }
+
+    function goToReview(){
+      const { lines, total } = getOrderSummary();
+      const listEl = document.getElementById('orderReviewList');
+      if (listEl) {
+        listEl.innerHTML = lines.map(l => `
+          <div class="flex justify-between py-1 border-b border-outline-variant/30">
+            <span class="text-on-surface">${l.name} × ${l.qty}</span>
+            <span class="font-medium text-primary">₹${l.lineTotal}</span>
+          </div>
+        `).join('');
+      }
+      const totalEl = document.getElementById('orderReviewTotal');
+      if (totalEl) totalEl.textContent = '₹' + total;
+      orderStep = 3;
+      showOrderStep();
+      updateOrderFooter();
+    }
+
+    function sendOrder(){
+      const { lines, total } = getOrderSummary();
+      const name = (document.getElementById('ord-name')?.value || '').trim() || 'Guest';
+      const table = (document.getElementById('ord-table')?.value || '').trim() || 'Not specified';
+      const phone = (document.getElementById('ord-phone')?.value || '').trim();
+      const note = (document.getElementById('ord-note')?.value || '').trim();
+      
+      let msg = [`Hi Silver Spoon! New table order:`, ``];
+      lines.forEach(l => msg.push(`- ${l.name} x${l.qty} (₹${l.lineTotal})`));
+      msg.push(``, `Total: ₹${total}`, `Name: ${name}`, `Table/Seat: ${table}`);
+      if (phone) msg.push(`Phone: ${phone}`);
+      if (note) msg.push(`Note: ${note}`);
+      
+      const encoded = encodeURIComponent(msg.join('\n'));
+      window.open(`https://wa.me/${OWNER_WHATSAPP}?text=${encoded}`, '_blank');
+      orderStep = 4;
+      showOrderStep();
+    }
+
+    // 1. Table Booking Direct to WhatsApp
+    const bookingForm = document.getElementById('table-booking-form');
+    const reserveConfirm = document.getElementById('reserve-confirmation');
+    if (bookingForm) {
+      bookingForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const date = document.getElementById('res-date')?.value || 'Not specified';
+        const time = document.getElementById('res-time')?.value || 'Not specified';
+        const phone = document.getElementById('res-phone')?.value || 'Not specified';
+
+        const msg = [
+          `Hi Silver Spoon! Table Reservation Request:`,
+          `- Date: ${date}`,
+          `- Seating Time: ${time}`,
+          `- Phone: ${phone}`,
+          ``,
+          `Please confirm our table hold.`
+        ].join('\n');
+
+        const encoded = encodeURIComponent(msg);
+        window.open(`https://wa.me/${OWNER_WHATSAPP}?text=${encoded}`, '_blank');
+
+        if (reserveConfirm) {
+          reserveConfirm.classList.remove('hidden');
+          reserveConfirm.classList.add('flex');
+        }
+      });
+    }
+
+    // 2. Banquet Inquiry Direct to WhatsApp
+    const eventForm = document.getElementById('event-inquiry-form');
+    const eventSuccess = document.getElementById('evt-success');
+    if (eventForm) {
+      eventForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('evt-name')?.value || 'Guest';
+        const phone = document.getElementById('evt-phone')?.value || 'Not specified';
+        const guests = document.getElementById('evt-guests')?.value || 'Not specified';
+        const date = document.getElementById('evt-date')?.value || 'Not specified';
+        const type = document.getElementById('evt-type')?.value || 'General Gathering';
+
+        const msg = [
+          `Hi Silver Spoon! Banquet & Event Inquiry:`,
+          `- Name: ${name}`,
+          `- Phone: ${phone}`,
+          `- Planned Date: ${date}`,
+          `- Event Type: ${type}`,
+          `- Expected Guests: ${guests}`,
+          ``,
+          `Please let us know availability and catering packages.`
+        ].join('\n');
+
+        const encoded = encodeURIComponent(msg);
+        window.open(`https://wa.me/${OWNER_WHATSAPP}?text=${encoded}`, '_blank');
+
+        if (eventSuccess) {
+          eventSuccess.classList.remove('hidden');
+        }
+        eventForm.reset();
+      });
+    }
+</script>
+</body></html>
