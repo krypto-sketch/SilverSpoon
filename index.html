@@ -132,7 +132,7 @@ Honest cooking, clay ovens, and spaces built for family gatherings.
 No booking fees. Direct confirmation over WhatsApp from our floor manager.
 </p>
 </div>
-<form class="bg-white p-6 sm:p-8 rounded-xl shadow-xl border border-outline-variant/50 grid grid-cols-1 sm:grid-cols-2 gap-5 md:grid-cols-12 relative" id="table-booking-form"><div class="md:col-span-3"><label class="block text-xs font-medium text-on-surface-variant mb-1.5" for="res-date">Date</label><input class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm text-on-surface focus:border-secondary focus:ring-0 transition-colors" id="res-date" type="date"/></div><div class="md:col-span-3"><label class="block text-xs font-medium text-on-surface-variant mb-1.5" for="res-time">Seating Time</label><select class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm text-on-surface focus:border-secondary focus:ring-0 transition-colors" id="res-time"><option value="12:30 PM (Lunch)">12:30 PM (Lunch)</option><option value="01:30 PM (Lunch)">01:30 PM (Lunch)</option><option value="02:30 PM (Afternoon)">02:30 PM (Afternoon)</option><option selected="" value="07:30 PM (Dinner)">07:30 PM (Dinner)</option><option value="08:30 PM (Dinner)">08:30 PM (Dinner)</option><option value="09:30 PM (Late Dinner)">09:30 PM (Late Dinner)</option></select></div><div class="md:col-span-3"><label class="block text-xs font-medium text-on-surface-variant mb-1.5" for="res-phone">Phone Number</label><input class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm text-on-surface focus:border-secondary focus:ring-0 transition-colors" id="res-phone" maxlength="15" placeholder="+91 98XXX XXXXX" required="" type="tel"/></div><div class="md:col-span-3 flex items-end"><button class="w-full h-[42px] bg-secondary hover:bg-[#893315] text-white text-[12px] tracking-wider uppercase font-semibold rounded-lg transition-all shadow-md active:scale-[0.99] flex items-center justify-center gap-2" type="submit"><span class="material-symbols-outlined text-base">chat</span><span>Reserve via WhatsApp</span></button></div></form>
+<form class="bg-white p-6 sm:p-8 rounded-xl shadow-xl border border-outline-variant/50 grid grid-cols-1 sm:grid-cols-2 gap-5 md:grid-cols-12 relative" id="table-booking-form"><input type="text" name="website" id="res-honeypot" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" aria-hidden="true"><div class="md:col-span-3"><label class="block text-xs font-medium text-on-surface-variant mb-1.5" for="res-date">Date</label><input class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm text-on-surface focus:border-secondary focus:ring-0 transition-colors" id="res-date" type="date"/></div><div class="md:col-span-3"><label class="block text-xs font-medium text-on-surface-variant mb-1.5" for="res-time">Seating Time</label><select class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm text-on-surface focus:border-secondary focus:ring-0 transition-colors" id="res-time"><option value="12:30 PM (Lunch)">12:30 PM (Lunch)</option><option value="01:30 PM (Lunch)">01:30 PM (Lunch)</option><option value="02:30 PM (Afternoon)">02:30 PM (Afternoon)</option><option selected="" value="07:30 PM (Dinner)">07:30 PM (Dinner)</option><option value="08:30 PM (Dinner)">08:30 PM (Dinner)</option><option value="09:30 PM (Late Dinner)">09:30 PM (Late Dinner)</option></select></div><div class="md:col-span-3"><label class="block text-xs font-medium text-on-surface-variant mb-1.5" for="res-phone">Phone Number</label><input class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm text-on-surface focus:border-secondary focus:ring-0 transition-colors" id="res-phone" maxlength="15" placeholder="+91 98XXX XXXXX" required="" type="tel"/></div><div class="md:col-span-3 flex items-end"><button class="w-full h-[42px] bg-secondary hover:bg-[#893315] text-white text-[12px] tracking-wider uppercase font-semibold rounded-lg transition-all shadow-md active:scale-[0.99] flex items-center justify-center gap-2" type="submit"><span class="material-symbols-outlined text-base">chat</span><span>Reserve via WhatsApp</span></button></div></form>
 <div class="hidden mt-4 p-3.5 bg-dark-slate text-white text-xs items-center justify-between rounded-lg" id="reserve-confirmation">
 <span>Opening WhatsApp to send your table reservation... Our floor team will confirm shortly.</span>
 <button class="text-white/60 hover:text-white ml-3 text-lg leading-none" onclick="document.getElementById('reserve-confirmation').classList.add('hidden'); document.getElementById('reserve-confirmation').classList.remove('flex');">×</button>
@@ -269,7 +269,7 @@ Planning an engagement party, anniversary lunch, or a family gathering? We offer
 </div>
 </div>
 </div>
-<div class="lg:col-span-5 bg-surface-container-lowest p-6 sm:p-8 rounded-2xl shadow-xl border border-outline-variant/50 relative"><div class="pb-4 border-b border-outline-variant/40"><span class="inline-block px-2.5 py-0.5 rounded bg-secondary/10 text-secondary text-xs font-semibold">Direct Manager Line</span><h3 class="font-serif-display text-2xl text-primary mt-2">Inquire for events</h3><p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Leave your dates and expected headcount. We reply directly on WhatsApp.</p></div><form class="space-y-4 pt-6" id="event-inquiry-form"><div><label class="block text-xs font-medium text-on-surface-variant mb-1" for="evt-name">Full Name</label><input class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm focus:border-secondary focus:ring-0" id="evt-name" maxlength="60" placeholder="Ramesh Singh" required="" type="text"/></div><div class="grid grid-cols-2 gap-3"><div><label class="block text-xs font-medium text-on-surface-variant mb-1" for="evt-phone">Phone / WhatsApp</label><input class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm focus:border-secondary focus:ring-0" id="evt-phone" maxlength="15" placeholder="+91 98XXX XXXXX" required="" type="tel"/></div><div><label class="block text-xs font-medium text-on-surface-variant mb-1" for="evt-guests">Guest Count</label><input class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm focus:border-secondary focus:ring-0" id="evt-guests" maxlength="4" placeholder="e.g. 50" type="number"/></div></div><div><label class="block text-xs font-medium text-on-surface-variant mb-1" for="evt-date">Planned Date</label><input class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm focus:border-secondary focus:ring-0" id="evt-date" type="date"/></div><div><label class="block text-xs font-medium text-on-surface-variant mb-1" for="evt-type">Event Type</label><select class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm focus:border-secondary focus:ring-0" id="evt-type"><option>Birthday &amp; Milestone Gathering</option><option>Wedding &amp; Ring Ceremony</option><option>Family Anniversary Feast</option><option>Corporate Dinner &amp; Meeting</option></select></div><button class="w-full py-3 bg-secondary hover:bg-[#893315] text-white text-xs tracking-wider uppercase font-semibold rounded-lg transition-colors mt-2 shadow-md flex items-center justify-center gap-2" type="submit"><span class="material-symbols-outlined text-base">chat</span><span>Send Inquiry via WhatsApp</span></button></form><div class="hidden mt-4 p-3 bg-dark-slate text-white text-xs rounded-lg" id="evt-success">Opening WhatsApp to send your event inquiry... Our banquet coordinator will respond promptly.</div></div>
+<div class="lg:col-span-5 bg-surface-container-lowest p-6 sm:p-8 rounded-2xl shadow-xl border border-outline-variant/50 relative"><div class="pb-4 border-b border-outline-variant/40"><span class="inline-block px-2.5 py-0.5 rounded bg-secondary/10 text-secondary text-xs font-semibold">Direct Manager Line</span><h3 class="font-serif-display text-2xl text-primary mt-2">Inquire for events</h3><p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Leave your dates and expected headcount. We reply directly on WhatsApp.</p></div><form class="space-y-4 pt-6" id="event-inquiry-form"><input type="text" name="website" id="evt-honeypot" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" aria-hidden="true"><div><label class="block text-xs font-medium text-on-surface-variant mb-1" for="evt-name">Full Name</label><input class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm focus:border-secondary focus:ring-0" id="evt-name" maxlength="60" placeholder="Ramesh Singh" required="" type="text"/></div><div class="grid grid-cols-2 gap-3"><div><label class="block text-xs font-medium text-on-surface-variant mb-1" for="evt-phone">Phone / WhatsApp</label><input class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm focus:border-secondary focus:ring-0" id="evt-phone" maxlength="15" placeholder="+91 98XXX XXXXX" required="" type="tel"/></div><div><label class="block text-xs font-medium text-on-surface-variant mb-1" for="evt-guests">Guest Count</label><input class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm focus:border-secondary focus:ring-0" id="evt-guests" maxlength="4" placeholder="e.g. 50" type="number"/></div></div><div><label class="block text-xs font-medium text-on-surface-variant mb-1" for="evt-date">Planned Date</label><input class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm focus:border-secondary focus:ring-0" id="evt-date" type="date"/></div><div><label class="block text-xs font-medium text-on-surface-variant mb-1" for="evt-type">Event Type</label><select class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-sm focus:border-secondary focus:ring-0" id="evt-type"><option>Birthday &amp; Milestone Gathering</option><option>Wedding &amp; Ring Ceremony</option><option>Family Anniversary Feast</option><option>Corporate Dinner &amp; Meeting</option></select></div><button class="w-full py-3 bg-secondary hover:bg-[#893315] text-white text-xs tracking-wider uppercase font-semibold rounded-lg transition-colors mt-2 shadow-md flex items-center justify-center gap-2" type="submit"><span class="material-symbols-outlined text-base">chat</span><span>Send Inquiry via WhatsApp</span></button></form><div class="hidden mt-4 p-3 bg-dark-slate text-white text-xs rounded-lg" id="evt-success">Opening WhatsApp to send your event inquiry... Our banquet coordinator will respond promptly.</div></div>
 </div>
 </section>
 <!-- ================= 6. REVIEWS ================= -->
@@ -696,11 +696,38 @@ function sendOrder(){
   showOrderStep();
 }
 
+// ============== FRONT-END BOT / SPAM PROTECTION ==============
+const pageLoadTime = Date.now();
+const MIN_FILL_TIME_MS = 2000; // humans take at least 2s to fill a form
+const COOLDOWN_MS = 30000; // 30s between submissions of the same form
+
+function isLikelyBot(honeypotEl){
+  // Honeypot filled = bot (invisible field, humans never touch it)
+  if (honeypotEl && honeypotEl.value.trim() !== '') return true;
+  // Submitted too fast to be human
+  if (Date.now() - pageLoadTime < MIN_FILL_TIME_MS) return true;
+  return false;
+}
+
+function isOnCooldown(key){
+  const last = localStorage.getItem(key);
+  if (last && Date.now() - parseInt(last, 10) < COOLDOWN_MS) return true;
+  return false;
+}
+function setCooldown(key){
+  try { localStorage.setItem(key, Date.now().toString()); } catch(e) {}
+}
+
 const bookingForm = document.getElementById('table-booking-form');
 const reserveConfirm = document.getElementById('reserve-confirmation');
 if (bookingForm) {
   bookingForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    if (isLikelyBot(document.getElementById('res-honeypot'))) return;
+    if (isOnCooldown('cooldown-booking')) {
+      alert('Please wait a moment before submitting again.');
+      return;
+    }
     const phoneEl = document.getElementById('res-phone');
     const phone = phoneEl?.value.trim() || '';
     if (!isValidPhone(phone)) {
@@ -728,6 +755,7 @@ if (bookingForm) {
     ].join('\n');
     const encoded = encodeURIComponent(msg);
     window.open(`https://wa.me/${OWNER_WHATSAPP}?text=${encoded}`, '_blank');
+    setCooldown('cooldown-booking');
     if (reserveConfirm) {
       reserveConfirm.classList.remove('hidden');
       reserveConfirm.classList.add('flex');
@@ -746,6 +774,11 @@ const eventSuccess = document.getElementById('evt-success');
 if (eventForm) {
   eventForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    if (isLikelyBot(document.getElementById('evt-honeypot'))) return;
+    if (isOnCooldown('cooldown-event')) {
+      alert('Please wait a moment before submitting again.');
+      return;
+    }
     const phoneEl = document.getElementById('evt-phone');
     const phone = phoneEl?.value.trim() || '';
     if (!isValidPhone(phone)) {
@@ -777,6 +810,7 @@ if (eventForm) {
     ].join('\n');
     const encoded = encodeURIComponent(msg);
     window.open(`https://wa.me/${OWNER_WHATSAPP}?text=${encoded}`, '_blank');
+    setCooldown('cooldown-event');
     if (eventSuccess) eventSuccess.classList.remove('hidden');
     eventForm.reset();
     setTimeout(() => {
