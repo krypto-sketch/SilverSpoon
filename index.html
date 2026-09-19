@@ -469,6 +469,26 @@ Object.entries(fullMenu).forEach(([cat, list]) => {
   list.forEach(item => { itemsById[item.id] = { ...item, category: cat }; });
 });
 
+// Basic Indian mobile number check: optional +91, then 10 digits starting 6-9
+function isValidPhone(value){
+  const cleaned = value.replace(/[\s-]/g, '');
+  return /^(\+?91)?[6-9]\d{9}$/.test(cleaned);
+}
+
+function showFieldError(inputEl, message){
+  clearFieldError(inputEl);
+  inputEl.classList.add('border-red-500');
+  const err = document.createElement('p');
+  err.className = 'text-xs text-red-600 mt-1 field-error';
+  err.textContent = message;
+  inputEl.insertAdjacentElement('afterend', err);
+}
+function clearFieldError(inputEl){
+  inputEl.classList.remove('border-red-500');
+  const next = inputEl.nextElementSibling;
+  if (next && next.classList.contains('field-error')) next.remove();
+}
+
 const orderableCategories = ["Shakes", "Mojito & Soda", "Tea & Coffee", "Soft Drinks & Water", "Desserts"];
 
 function openMenuModal(){
@@ -627,10 +647,26 @@ function goToReview(){
 }
 
 function sendOrder(){
+  const phoneEl = document.getElementById('ord-phone');
+  const phone = (phoneEl?.value || '').trim();
+  if (phone && !isValidPhone(phone)) {
+    showFieldError(phoneEl, 'Enter a valid 10-digit Indian phone number');
+    goToStep(2);
+    return;
+  }
+  clearFieldError(phoneEl);
+
+  const sendBtn = document.querySelector('[onclick="sendOrder()"]');
+  if (sendBtn) {
+    if (sendBtn.disabled) return; // already sent, block double taps
+    sendBtn.disabled = true;
+    sendBtn.textContent = 'Sending...';
+    sendBtn.classList.add('opacity-60', 'pointer-events-none');
+  }
+
   const { lines, total } = getOrderSummary();
   const name = (document.getElementById('ord-name')?.value || '').trim() || 'Guest';
   const table = (document.getElementById('ord-table')?.value || '').trim() || 'Not specified';
-  const phone = (document.getElementById('ord-phone')?.value || '').trim();
   const note = (document.getElementById('ord-note')?.value || '').trim();
 
   let msg = [`Hi Silver Spoon! New table order:`, ``];
@@ -650,9 +686,23 @@ const reserveConfirm = document.getElementById('reserve-confirmation');
 if (bookingForm) {
   bookingForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    const phoneEl = document.getElementById('res-phone');
+    const phone = phoneEl?.value.trim() || '';
+    if (!isValidPhone(phone)) {
+      showFieldError(phoneEl, 'Enter a valid 10-digit Indian phone number');
+      return;
+    }
+    clearFieldError(phoneEl);
+
+    const submitBtn = bookingForm.querySelector('button[type="submit"]');
+    if (submitBtn) {
+      if (submitBtn.disabled) return;
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-60', 'pointer-events-none');
+    }
+
     const date = document.getElementById('res-date')?.value || 'Not specified';
     const time = document.getElementById('res-time')?.value || 'Not specified';
-    const phone = document.getElementById('res-phone')?.value || 'Not specified';
     const msg = [
       `Hi Silver Spoon! Table Reservation Request:`,
       `- Date: ${date}`,
@@ -667,6 +717,12 @@ if (bookingForm) {
       reserveConfirm.classList.remove('hidden');
       reserveConfirm.classList.add('flex');
     }
+    setTimeout(() => {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-60', 'pointer-events-none');
+      }
+    }, 4000);
   });
 }
 
@@ -675,8 +731,22 @@ const eventSuccess = document.getElementById('evt-success');
 if (eventForm) {
   eventForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    const phoneEl = document.getElementById('evt-phone');
+    const phone = phoneEl?.value.trim() || '';
+    if (!isValidPhone(phone)) {
+      showFieldError(phoneEl, 'Enter a valid 10-digit Indian phone number');
+      return;
+    }
+    clearFieldError(phoneEl);
+
+    const submitBtn = eventForm.querySelector('button[type="submit"]');
+    if (submitBtn) {
+      if (submitBtn.disabled) return;
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-60', 'pointer-events-none');
+    }
+
     const name = document.getElementById('evt-name')?.value || 'Guest';
-    const phone = document.getElementById('evt-phone')?.value || 'Not specified';
     const guests = document.getElementById('evt-guests')?.value || 'Not specified';
     const date = document.getElementById('evt-date')?.value || 'Not specified';
     const type = document.getElementById('evt-type')?.value || 'General Gathering';
@@ -694,6 +764,12 @@ if (eventForm) {
     window.open(`https://wa.me/${OWNER_WHATSAPP}?text=${encoded}`, '_blank');
     if (eventSuccess) eventSuccess.classList.remove('hidden');
     eventForm.reset();
+    setTimeout(() => {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-60', 'pointer-events-none');
+      }
+    }, 4000);
   });
 }
 </script>
